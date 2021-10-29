@@ -81,18 +81,24 @@ void nReinas( int cantReinasActu, int numReinas, int tamTabla, vector <int> solA
     {
         cantSoluciones++;
         solucionesCompletas.push_back(solAnt);
+    
+    }
+    else
+    {
+        return;
     }
 
     for (int i = 0;i < tamTabla;i++)
     {
-        if (coliciona(solAnt, i)==-1 and cantReinasActu<numReinas)
+        if (coliciona(solAnt, i) == -1 and cantReinasActu < numReinas)
         {
             tempo = solAnt;
             tempo.push_back(i);
             poolthreads.push_back(thread(nReinas, cantReinasActu + 1, numReinas, tamTabla, tempo));
-            //nReinas(cantReinasActu+1, numReinas, tamTabla, tempo);
+            //nReinas(cantReinasActu+1, numReinas, tamTabla, tempo)
 
         }
+        else return;
     }
     for (int i = 0; i < poolthreads.size(); i++)
     {
