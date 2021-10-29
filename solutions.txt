@@ -1,0 +1,2 @@
+#Solutions for 13 queens 
+0
