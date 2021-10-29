@@ -50,7 +50,7 @@ void imprimirDot()
             else
                 file << "<td> </td>";
         }
-        file << "< / tr> \n";
+        file << "</tr> \n";
     }               
     file << "</table>>" << "\n";
     file << " ];" << "\n";
