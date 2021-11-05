@@ -83,10 +83,6 @@ void nReinas( int cantReinasActu, int numReinas, int tamTabla, vector <int> solA
         solucionesCompletas.push_back(solAnt);
     
     }
-    else
-    {
-        return;
-    }
 
     for (int i = 0;i < tamTabla;i++)
     {
@@ -98,7 +94,6 @@ void nReinas( int cantReinasActu, int numReinas, int tamTabla, vector <int> solA
             //nReinas(cantReinasActu+1, numReinas, tamTabla, tempo)
 
         }
-        else return;
     }
     for (int i = 0; i < poolthreads.size(); i++)
     {
@@ -167,5 +162,5 @@ int main(int argc,char *argv[])
         findReina(0, nReina, arr);
         imprimirDot();
     }
-
+    return 0;
 }
